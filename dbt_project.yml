@@ -24,6 +24,17 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+vars:
+  DIM_DATE_START: '1990-01-01'
+  DIM_DATE_END: '2000-06-01'
+  batch_id: '{{invocation_id}}'
+  dbt_date:time_zone: 'Europe/Paris'
+ 
+  #logger
+  debug-level: 3
+  debug-level-Info: 1
+  debug-level-Warn: 2
+  debug-level-Err: 3
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -37,6 +48,30 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
-    # Applies to all files under models/example/
-    example:
+    +database: ANALYTICS_{{target.name}}
+    matrs:
+      tags: ['mart']
+      +schema: reporting
       +materialized: table
+    staging:
+      +tags: ['stg']
+      +schema: staging
+      +materialized:  view
+    mirror:
+      +tags: ['mirror']
+      +materialized: table
+      +schema: event
+      +database: MIRROR__{{target.name}}
+    objects:
+      +tags: ['obj']
+      +materialized: table
+      +schema: object
+    transforming:
+      +tags: ['trans']
+      +materialized: ephemeral
+    utils:
+      +tags: ['utils']
+      +materialized: ephemeral
+
+      
+
