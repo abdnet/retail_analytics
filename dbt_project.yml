@@ -58,10 +58,10 @@ models:
       +schema: staging
       +materialized:  view
     mirror:
-      +tags: ['mirror']
+      +tags: ['event']
       +materialized: table
       +schema: event
-      +database: MIRROR__{{target.name}}
+      +database: MIRROR
     objects:
       +tags: ['obj']
       +materialized: table
