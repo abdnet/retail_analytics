@@ -60,8 +60,8 @@ models:
     mirror:
       +tags: ['event']
       +materialized: table
-      +schema: event
-      +database: MIRROR
+      +schema: STAGING
+      +database: ANALYTICS_DEV
     objects:
       +tags: ['obj']
       +materialized: table
