@@ -1,14 +1,38 @@
 analytics_retail:
-  target: dev
+  target: DEV
   outputs:
-    dev:
-      type: snowflake
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('SNOWFLAKE_USER') }}"
+    DEV:
+      account:  "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
       schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
-      threads: {{ env_var('SNOWFLAKE_THREADS') | default(1) }}
-      query_tag: "{{ env_var('SNOWFLAKE_QUERY_TAG') | default('') }}"
+      threads:  4
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+      query_tag:  "{{ env_var('SNOWFLAKE_QUERY_TAG') }}"
+    PROD:
+      account:  "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
+      threads:  4
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+      query_tag:  "{{ env_var('SNOWFLAKE_QUERY_TAG') }}"
+
+    TST:
+      account:  "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
+      threads:  4
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+      query_tag:  "{{ env_var('SNOWFLAKE_QUERY_TAG') }}"
+   
