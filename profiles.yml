@@ -1,8 +1,8 @@
 analytics_retail:
-  target: DEV
+  target: dev
   outputs:
-    DEV:
-      account:  "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+    dev:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
@@ -11,9 +11,8 @@ analytics_retail:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
-      query_tag:  "{{ env_var('SNOWFLAKE_QUERY_TAG') }}"
-    PROD:
-      account:  "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+    prod:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
@@ -22,10 +21,8 @@ analytics_retail:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
-      query_tag:  "{{ env_var('SNOWFLAKE_QUERY_TAG') }}"
-
-    TST:
-      account:  "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+    tst:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
@@ -34,5 +31,3 @@ analytics_retail:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
-      query_tag:  "{{ env_var('SNOWFLAKE_QUERY_TAG') }}"
-   
