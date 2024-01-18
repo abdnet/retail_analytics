@@ -7,7 +7,6 @@ analytics_retail:
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
       schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
-      threads:  4
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
@@ -17,7 +16,6 @@ analytics_retail:
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
       schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
-      threads:  4
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
@@ -27,7 +25,6 @@ analytics_retail:
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       role: "{{ env_var('SNOWFLAKE_ROLE') }}"
       schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
-      threads:  4
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse:  "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
