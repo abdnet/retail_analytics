@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: EVENT
+    database: RAW
+    schema: LOCAL_API
+    tables:
+      - name: EVENT_CUSTOMERS
+        description: One record per customer. Includes information about customers.
