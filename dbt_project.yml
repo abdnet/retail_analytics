@@ -61,7 +61,7 @@ models:
       +tags: ['event']
       +materialized: table
       +schema: STAGING
-      +database: ANALYTICS_DEV
+      +database: ANALYTICS_{{target.name}}
     objects:
       +tags: ['obj']
       +materialized: table
