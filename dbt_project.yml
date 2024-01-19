@@ -59,7 +59,7 @@ models:
       +materialized:  view
     mirror:
       +tags: ['event']
-      +materialized: table
+      +materialized: incremental
       +schema: STAGING
       +database: ANALYTICS_{{target.name}}
     objects:
